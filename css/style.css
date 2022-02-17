@@ -1,12 +1,26 @@
+/* inputs tag  */
 .income{
-    margin-left: 39px;
+    text-align: center;
 }
 .food{
-    margin-left: 64px;
+    text-align: center;
+    margin-left: 23px;
 }
 .rent{
-    margin-left: 69px;
+    text-align: center;
+    margin-left: 29px;
 }
 .clothes{
-    margin-left: 38px;
+    text-align: center;
+    margin-left: 3px;
+}
+/* calculate  */
+.custom-calculate-input{
+    height: 40px;
+    width: 165px;
+}
+/* save  */
+.custom-save-input{
+    height: 40px;
+    width: 110px;
 }

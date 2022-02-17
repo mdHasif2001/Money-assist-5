@@ -15,30 +15,46 @@
         <h2 class="text-center fw-bolder fs-1 text-success m-5">Money Assist</h2>
     </header>   
     <main>
-        <section>
+        <section class="container">
             <div class="container overflow-hidden">
                 <div class="row gx-5">
-                  <div class="col">
-                   <img src="img/money.jpg" height="500px" width="600px">
+                  <!-- image  -->
+                  <div class="col-12 col-lg-6">
+                   <img src="img/money.jpg" class="mb-4 img-fluid" height="700px" width="600px">
                   </div>
-                  <div class="col">
+                  <!-- input tags -->
+                  <div class="col-12 col-lg-6">
                     <div class="bg-light">
 
-                      <h3 class="text-center pt-4 pb-3 text-success fw-bold">Income</h3>
-                      <h4 class="mb-3 income">Income: <input class="ps-3" type="text" placeholder="Your Income"></h4>
+                      <h4 class="text-center pt-4 pb-3 text-success fw-bold">Income</h4>
+                      <h5 class="mb-3 income">Income: <input class="ps-3 custom-calculate-input" type="text" placeholder="Your Income"></h5>
                       
 
-                      <h3 class="text-center pt-4 pb-3 text-success fw-bold">Expenses</h3>
+                      <h4 class="text-center pt-4 pb-3 text-success fw-bold">Expenses</h4>
 
-                      <h4 class="mb-3 food">Food: <input class="ps-3" type="text" placeholder="Food Cost"></h4>
+                      <h5 class="mb-3 food">Food: <input class="ps-3 custom-calculate-input" type="text" placeholder="Food Cost"></h5>
 
-                      <h4 class="mb-3 rent">Rent: <input class="ps-3" type="text" placeholder="Rent Cost"></h4>
+                      <h5 class="mb-3 rent">Rent: <input class="ps-3 custom-calculate-input" type="text" placeholder="Rent Cost"></h5>
 
-                      <h4 class="mb-3 clothes">Clothes: <input class="ps-3" type="text" placeholder="Clothes Cost"></h4>
+                      <h5 class="mb-3 clothes">Clothes: <input class="ps-3 custom-calculate-input" type="text" placeholder="Clothes Cost"></h5>
 
+                      <!-- calculate  -->
                       <p class="d-flex justify-content-center">
                         <button type="button" class="btn btn-outline-success btn-lg">Calculate</button>
                       </p>
+
+                      <h4 class="text-center text-success fw-bold pb-2">Total Expenses: <span>00</span></h4>
+
+                      <h4 class="text-center text-success fw-bold pb-3">Balance: <span>00</span></h4>
+                      
+                      <!-- save  -->
+                      <div class="d-flex justify-content-center pb-3">
+                        <h5>Save: <input class="ps-3 custom-save-input" type="text" placeholder="Savings"> % <button type="button" class="btn btn-outline-success btn-lg">Save</button>
+                        </h5>  
+                      </div>
+
+                      <h4 class="text-center text-success fw-bold pb-2">Saving Amount: <span>00</span></h4>
+                      <h4 class="text-center text-success fw-bold pb-5">Remaining Balance: <span>00</span></h4>
 
                     </div>
                   </div>
