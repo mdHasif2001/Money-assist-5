@@ -21,10 +21,14 @@ document.getElementById('calc-button').addEventListener('click', function(){
     const expensesTotalText = expensesTotal.innerText;
     const previousExpensesTotal = parseFloat(expensesTotalText);
 
-    const totalCost = FoodInput + rentInput + clothsInput;
-    const expensesTotalCost = totalCost + previousExpensesTotal;
-    expensesTotal.innerText = expensesTotalCost;
-
+    if(FoodInput<0 || rentInput <0 || clothsInput<0){
+        alert("Please input positive number")
+    }
+    else{
+        const totalCost = FoodInput + rentInput + clothsInput;
+        const expensesTotalCost = totalCost + previousExpensesTotal;
+        expensesTotal.innerText = expensesTotalCost; 
+        
     // balance
     const income = getInputValue('income-input');
 
@@ -34,6 +38,8 @@ document.getElementById('calc-button').addEventListener('click', function(){
 
     const totalBalance = (income - expensesTotalCost) + previousBalanceTotal;
     balanceTotal.innerText = totalBalance;
+    }
+    
 })
 
 // saving amount and remaining balance
