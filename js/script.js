@@ -57,4 +57,12 @@ document.getElementById('save-button').addEventListener('click', function(){
     const mySavingsCost = myBalance * ((saveCost)/100);
     savingTotal.innerText = mySavingsCost;
 
+    // remaining balance
+
+    const remainingTotal = document.getElementById('remaining-total');
+    const remainingTotalText = remainingTotal.innerText;
+    const remainingTotalCost = parseFloat(remainingTotalText);
+
+    const totalRemainingBalance = myBalance - mySavingsCost;
+    remainingTotal.innerText = totalRemainingBalance;
 })
