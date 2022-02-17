@@ -9,8 +9,7 @@ function getInputValue(inputId){
     return amountValue;
 }
 
-
-// cost
+// total expenses and balance
 
 document.getElementById('calc-button').addEventListener('click', function(){
     // Cost
@@ -33,8 +32,29 @@ document.getElementById('calc-button').addEventListener('click', function(){
     const balanceTotalText = balanceTotal.innerText;
     const previousBalanceTotal = parseFloat(balanceTotalText);
 
-    const totalBalance = income - expensesTotalCost;
+    const totalBalance = (income - expensesTotalCost) + previousBalanceTotal;
     balanceTotal.innerText = totalBalance;
-
 })
 
+// saving amount and remaining balance
+
+document.getElementById('save-button').addEventListener('click', function(){
+    // balance
+
+    const balanceTotal = document.getElementById('balance-total');
+    const balanceTotalText = balanceTotal.innerText;
+    const myBalance = parseFloat(balanceTotalText)
+
+    // save
+
+    const saveInput = getInputValue('save-input');
+    const saveCost = parseFloat(saveInput)
+
+    const savingTotal = document.getElementById('saving-total');
+    const savingTotalText = savingTotal.innerText;
+    const mySavings = parseFloat(savingTotalText);
+
+    const mySavingsCost = myBalance * ((saveCost)/100);
+    savingTotal.innerText = mySavingsCost;
+
+})
